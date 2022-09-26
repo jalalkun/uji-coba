@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeNavFragment">
+
+
+    <fragment
+        android:id="@+id/firstNavFragment"
+        android:name="com.example.ujicoba.navigation.firstFragment.FirstNavFragment"
+        android:label="fragment_first_nav"
+        tools:layout="@layout/fragment_first_nav" >
+        <action
+            android:id="@+id/action_firstNavFragment_to_secondNavFragment"
+            app:destination="@id/secondNavFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondNavFragment"
+        android:name="com.example.ujicoba.navigation.secondFragment.SecondNavFragment"
+        android:label="fragment_second_nav"
+        tools:layout="@layout/fragment_second_nav" >
+        <action
+            android:id="@+id/action_secondNavFragment_to_firstNavFragment"
+            app:destination="@id/firstNavFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeNavFragment"
+        android:name="com.example.ujicoba.navigation.HomeNavFragment"
+        android:label="fragment_home_nav"
+        tools:layout="@layout/fragment_home_nav" >
+        <action
+            android:id="@+id/action_homeNavFragment_to_firstNavFragment"
+            app:destination="@id/firstNavFragment" />
+        <action
+            android:id="@+id/action_homeNavFragment_to_secondNavFragment"
+            app:destination="@id/secondNavFragment" />
+        <action
+            android:id="@+id/action_homeNavFragment_to_firstNavFragment2"
+            app:destination="@id/firstNavFragment" />
+    </fragment>
+</navigation>
